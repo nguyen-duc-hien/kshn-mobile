@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration</title>
+    <!-- taildwind css import -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind.config.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/style/main.css" />
+
+    <!-- font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- fancy box -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+        integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="lg:px-5 lg:pb-5 bg-body-color">
+    <header>
+        <div class="header">
+            <!-- header pc -->
+            <!-- header-mobile -->
+            <div class="w-full header-mobile fixed top-0 z-[5] bg-[#FCFAF7]">
+                <div class="container flex items-center justify-between py-3 h-20">
+                    <a href="#" class="w-[88px] button bg-primary uppercase">book</a>
+                    <a href="/" class="-translate-x-[20px] sm:translate-x-0">
+                        <div class="logo">
+                            <figure class="w-[112px]">
+                                <img src="/assets/image/header-logo.svg" alt="logo">
+                            </figure>
+                        </div>
+                    </a>
+                    <button class="breadcrumb-button">
+                        <figure>
+                            <img src="/assets/image/icon/menu-3bar-36.svg" alt="icon">
+                        </figure>
+                    </button>
+                    <button class="breadcrumb-close hidden">
+                        <figure class="w-8 h-8">
+                            <img src="/assets/image/icon/menu-close-36.svg" alt="icon">
+                        </figure>
+                    </button>
+                </div>
+                <style>
+                    .breadcrumb-mobile {
+                        width: 95vw;
+                        max-width: 343px;
+                        height: calc(100vh - 80px);
+                        position: fixed;
+                        bottom: 0;
+                        right: 0;
+                        z-index: 5;
+                        transition: all .3s ease-in-out;
+                    }
+                </style>
+                <div class="breadcrumb-header hidden breadcrumb-mobile">
+                    <div class=" flex flex-col bg-[#F4EDE5] w-full h-full relative">
+                        <figure class="absolute right-0 bottom-0"><img src="/assets/image/breadcrumb-mobile-illus.svg"
+                                alt="illus"></figure>
+                        <div class="relative z-[2] h-full w-full flex flex-col justify-between pl-8 pr-4 pb-10 pt-14">
+                            <div class="breadcrumb-container custom-scrollbar">
+                                <nav class="flex flex-col gap-11">
+                                    <ul class="flex flex-col justify-between gap-3">
+                                        <li class="">
+                                            <a href="#" class="link-nav home">Products</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="link-nav home">Promotions</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="link-nav home">About us</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="link-nav home">Skincare Tips</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="link-nav home">Blogs</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="link-nav home">FAQs</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="link-nav home">Contact us</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="flex flex-col gap-3 ">
+                                        <li>
+                                            <a href="#" class="link-nav home">About us</a>
+                                        </li>
+                                        <li class="sub-wrap ">
+                                            <div class="flex items-center gap-2 open-sub-mobile">
+                                                <p class="link-nav home">
+                                                    Destination
+                                                </p>
+                                                <figure class="sub-1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"
+                                                        viewBox="0 0 8 8" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M8 4.80208H0V3.46875H8V4.80208Z" fill="#715137" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M3.19987 8L3.19987 5.82814e-08L4.5332 0L4.5332 8L3.19987 8Z"
+                                                            fill="#715137" />
+                                                    </svg>
+                                                </figure>
+                                                <figure class="sub-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="2"
+                                                        viewBox="0 0 8 2" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M8 1.33333H0V0H8V1.33333Z" fill="#715137" />
+                                                    </svg>
+                                                </figure>
+                                            </div>
+                                            <div class="sub-menu mobile">
+                                                <ul class="pl-5 flex flex-col justify-between gap-3">
+                                                    <li class="">
+                                                        <a href="#" class="link-nav home">Destination 1</a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="#" class="link-nav home">Destination 2</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="flex items-center gap-[72px] justify-between">
+                                <a href="#" class="w-[135px] button bg-secondary uppercase">Connect with us</a>
+                                <select name="language" id="language-select" class="input-language mobile">
+                                    <option value="1" selected="">EN</option>
+                                    <option value="2">VN</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- holder header -->
+            <div class="h-[80px]"></div>
+        </div>
+        <script>
+            document.querySelectorAll('.open-sub-mobile').forEach(item => {
+                item.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Ngừng sự kiện bọt nổi
+                    const menu = document.querySelector('.sub-menu.mobile');
+                    menu.classList.toggle('show');
+                    menu.classList.toggle('pt-2');
+                    this.classList.toggle('active');
+                });
+            });
+        </script>
+    </header>
+    <main>
+        <!-- -------------------- section 1 -------------------- -->
+        <section class="">
+            <!-- Slider main container -->
+            <div id="home-swiper" class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <figure><img src="/assets/image/home-banner.png" alt="banner"></figure>
+                    </div>
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <figure><img src="/assets/image/home-banner.png" alt="banner"></figure>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination home"></div>
+            </div>
+        </section>
+        <!-- -------------------- section 2 -------------------- -->
+        <section class="pt-10 lg:pt-20">
+            <div class="container">
+                <div class="flex flex-col items-center justify-center">
+                    <p class="text-body-xs-semibold font-basker text-primary text-center uppercase">
+                        CELEBRATION & EVENTS
+                    </p>
+                    <h1 class="mt-6 text-heading-h1 text-primary uppercase text-center">
+                        MAKE YOUR APPOINTMENT
+                    </h1>
+                    <p class="mt-4 lg:max-w-[523px] text-body-xs-regular text-primary-text text-center">
+                        The ballroom, spanning an impressive 521m² and accommodating up to 400 guests, is a distinctive
+                        asset that sets us apart
+                        from other hotels. Strategically located in the city, it serves as the ideal venue for
+                        prestigious events, offering an
+                        elegant and versatile space for corporate functions, gala dinners, and high-profile gatherings.
+                        Supported by a highly
+                        professional and experienced team, we ensure every event is executed with precision and
+                        excellence, delivering an
+                        unparalleled experience for our clients and their guests.
+                    </p>
+                </div>
+            </div>
+            <!-- swiper show  -->
+            <div class="max-w-[1768px] mx-auto px-6 pt-10 lg:pt-[50px]">
+                <div id="exclusive-offer-swiper" class="swiper details">
+                    <div class="swiper-wrapper">
+                        <!-- Slide Item -->
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <figure><img src="/assets/image/accom-detail-img.png" alt=""></figure>
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <figure><img src="/assets/image/cta-bg.png" alt=""></figure>
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <figure><img src="/assets/image/accom-detail-img.png" alt=""></figure>
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <figure><img src="/assets/image/cta-bg.png" alt=""></figure>
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <figure><img src="/assets/image/accom-detail-img.png" alt=""></figure>
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <figure><img src="/assets/image/cta-bg.png" alt=""></figure>
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <figure><img src="/assets/image/accom-detail-img.png" alt=""></figure>
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <figure><img src="/assets/image/cta-bg.png" alt=""></figure>
+                        </div>
+                    </div>
+
+
+                    <!-- Navigation buttons -->
+                    <div
+                        class="max-md:mt-4 md:absolute bottom-4 w-full flex justify-center items-center gap-4 lg:gap-20 xl:gap-[140px] min-h-[36px]">
+                        <div class="position-none-button swiper-button-prev">
+                        </div>
+                        <div
+                            class="position-none-button number swiper-pagination text-body-xs-regular text-primary-text">
+                            1 — 6</div>
+                        <div class="position-none-button swiper-button-next">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 3 -------------------- -->
+        <section class="py-10 lg:pt-[50px] lg:pb-[293px]">
+            <div class="container">
+                <h2 class="text-heading-h1 text-primary uppercase text-center">
+                    Lay-out
+                </h2>
+
+                <div class="mt-8 rounded-[4px] bg-fill grid grid-cols-12 gap-6 py-10 lg:py-24">
+                    <div class="col-span-1 lg:col-span-2"></div>
+                    <div class="col-span-10 lg:col-span-8 w-full mx-auto overflow-x-auto custom-scrollbar">
+                        <style>
+                            .table-head {
+                                text-align: center;
+                                vertical-align: middle;
+                                padding-top: 16px;
+                                padding-bottom: 12px;
+                                border-bottom: 1px solid #a6a6a6;
+                                font-size: 12px;
+                                line-height: 166.7%;
+                                font-weight: 600;
+                                color: #4F4F4F;
+                                text-transform: uppercase;
+                            }
+
+                            .table-head:first-child {
+                                text-align: start;
+                            }
+
+                            .table-head.center {
+                                text-align: center;
+                            }
+
+                            .table-head.first {
+                                text-align: center;
+                                vertical-align: middle;
+                                padding-bottom: 10px;
+                                font-weight: 700;
+                                border-bottom: 1px solid #d7d7d7;
+                            }
+
+                            .table-body tr td {
+                                text-align: center;
+                                vertical-align: middle;
+                                padding-top: 16px;
+                                padding-bottom: 12px;
+                                border-bottom: 1px solid #d7d7d7;
+                                font-size: 12px;
+                                line-height: 166.7%;
+                                font-weight: 600;
+                                color: #4F4F4F;
+                                text-transform: uppercase;
+                            }
+
+                            .table-body tr td:first-child {
+                                text-align: start;
+                                vertical-align: middle;
+                            }
+
+                            .table-body tr td.center {
+                                text-align: center;
+                            }
+
+                            .table-body tr:last-child td {
+                                padding-top: 16px;
+                                padding-bottom: 12px;
+                                border-bottom: 1px solid #A6A6A6;
+                            }
+                        </style>
+                        <table class="w-full min-w-[600px]">
+                            <thead>
+                                <tr>
+                                    <th class="table-head" style="width: 15%;" rowspan="2">Room</th>
+                                    <th class="table-head" style="width: 12%;" rowspan="2">Area (m2)</th>
+                                    <th class="table-head" style="width: 12%;" rowspan="2">Floor</th>
+                                    <th class="table-head first" colspan="5">Capacity <span
+                                            class="inline-block font-medium lowercase">(guests)</span></th>
+                                </tr>
+                                <tr>
+                                    <th class="table-head center" style="width: 12%;">Theater</th>
+                                    <th class="table-head" style="width: 12%;">Classroom</th>
+                                    <th class="table-head" style="width: 12%;">U-shape</th>
+                                    <th class="table-head" style="width: 15%;">Banquet</th>
+                                    <th class="table-head" style="width: 15%;">Cocktail</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <tr>
+                                    <td>Ballroom 01</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Ballroom 02</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Ballroom 03</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-span-1 lg:col-span-2"></div>
+                </div>
+
+                <div class="mt-12">
+                    <h2 class="text-heading-h4 text-primary uppercase">
+                        Booking form
+                    </h2>
+                    <form class="mt-10 lg:mt-[44px] grid grid-cols-12 gap-6 relative">
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
+                            <p class="title-booking">Select type off event <span class="required">*</span></p>
+                            <select class="input-field">
+                                <option value="null">Select type off event *</option>
+                                <option value="1">1</option>
+                                <option value="1">1</option>
+                            </select>
+                        </label>
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
+                            <p class="title-booking">Date <span class="required">*</span></p>
+                            <input type="text" class="input-field lower">
+                        </label>
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
+                            <p class="title-booking">Time <span class="required">*</span></p>
+                            <input type="text" class="input-field lower" placeholder="">
+                        </label>
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
+                            <p class="title-booking">Duration <span class="required">*</span></p>
+                            <input type="text" class="input-field lower" placeholder="">
+                        </label>
+
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
+                            <p class="title-booking">Number of Guests</p>
+                            <select class="input-field">
+                                <option value="null">Number of Guests</option>
+                                <option value="1">1</option>
+                                <option value="1">1</option>
+                            </select>
+                        </label>
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
+                            <p class="title-booking">Full name</p>
+                            <input type="text" class="input-field lower">
+                        </label>
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
+                            <p class="title-booking">Company <span class="required">*</span></p>
+                            <input type="text" class="input-field lower" placeholder="">
+                        </label>
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-8">
+                            <p class="title-booking">Address</p>
+                            <input type="text" class="input-field lower">
+                        </label>
+                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
+                            <p class="title-booking">Phone number</p>
+                            <input type="text" class="input-field lower" placeholder="">
+                        </label>
+                        <label class="input-label max-lg:order-2 col-span-12 lg:col-span-8">
+                            <p class="title-booking">Additional Request</p>
+                            <textarea rows="5" class="input-field lower"></textarea>
+                        </label>
+                        <label class="input-label max-lg:order-1 col-span-12 md:col-span-6 lg:col-span-4">
+                            <p class="title-booking">Email</p>
+                            <input type="text" class="input-field lower" placeholder="">
+                        </label>
+                        <button
+                            class="max-lg:col-span-12 max-lg:order-3 button lg:absolute bottom-0 w-full lg:w-[32%] right-0">SEND
+                            BOOKING</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 4 -------------------- -->
+
+        <!-- -------------------- section 5 -------------------- -->
+
+        <!-- -------------------- section 6 -------------------- -->
+
+        <!-- -------------------- section 7 -------------------- -->
+
+        <!-- -------------------- section 8 -------------------- -->
+
+
+
+    </main>
+    <footer class="footer bg-fill pt-9 pb-14">
+        <div class="container">
+
+            <div
+                class="mt-8 bg-primary-50 rounded-[4px] pl-5 pr-4 pt-8 pb-[42px] flex flex-col md:flex-row items-center gap-10 justify-between">
+                <div class="flex flex-col gap-3 lg:max-w-[353px]">
+                    <h2 class="text-body-3xl-medium font-playfair text-primary">
+                        Connect with us
+                    </h2>
+                    <p class="text-body-xs-regular text-primary-text">Sign up for exclusive updates from the world of
+                        Janu, including events, new offers and early access to our unique
+                        experiences.</p>
+                </div>
+                <form class="w-full lg:max-w-[384px] h-fit flex items-center border-b border-solid border-primary">
+                    <label class="input-label flex-1">
+                        <input type="text" class="!pl-0 input-field transparent uppercase"
+                            placeholder="ENTER YOUR EMAIL ADDRESS">
+                    </label>
+                    <div class="border-l border-solid border-primary pl-3 pb-2">
+                        <button class="button pl-[23px] pr-4">SIGN UP
+                            <figure class="-rotate-90"><img src="/assets/image/icon/triangle-down-white.svg" alt="icon">
+                            </figure>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- more info -->
+            <div class="grid grid-cols-2 mt-11">
+                <div class="max-w-[132px] flex flex-col gap-5">
+                    <h2 class="text-body-xs-semibold text-primary">
+                        HANOI LEGEND SUITES
+                    </h2>
+                    <ul class="flex flex-col gap-2 uppercase">
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">About us</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Careers</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Accommodation</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Drink & Dine</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Wellness</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Inspiring stories</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Exclusive offers</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Privacy policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="max-w-[186px] flex flex-col gap-5">
+                    <div class=" flex flex-col gap-8">
+                        <h2 class="text-body-xs-semibold text-primary">
+                            CONTACT US
+                        </h2>
+                        <div class="flex flex-col gap-2">
+                            <div class="text-body-xs-regular text-primary-text flex items-center gap-1">
+                                Tel: <a href="#" class="link-text">(+84) 24 3939 3691</a>
+                            </div>
+                            <div class="text-body-xs-regular text-primary-text">
+                                For reservations:<a href="#" class="link-text">booking@hanoilegendsuites.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <h2 class="text-body-xs-semibold text-primary">
+                            CONTACT US
+                        </h2>
+                        <div class="flex flex-col gap-5">
+                            <a href="#" class="link-text text-body-xs-regular">Hanoi Legend Suites</a>
+                            <a href="#" class="button px-[22px]">FACTSHEET
+                                <figure><img src="/assets/image/icon/triangle-down-white.svg" alt="icon"></figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 mt-8">
+                <div class="flex flex-col gap-2">
+                    <p class="text-body-xxs-regular uppercase text-primary-text">
+                        Connect with us
+                    </p>
+                    <select name="language" id="language-select" class="input-language mobile">
+                        <option value="1" selected="">EN</option>
+                        <option value="2">VN</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-body-xxs-regular uppercase text-primary-text">
+                        Connect with us
+                    </p>
+                    <div class="social-list">
+                        <a href="#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none">
+                                <g clip-path="url(#clip0_6364_2246)">
+                                    <path
+                                        d="M16.8247 31.9997H15.1985C14.7351 31.9473 14.2696 31.907 13.8071 31.8405C10.172 31.3106 7.06174 29.7408 4.50464 27.0991C2.23268 24.7526 0.819118 21.9627 0.250874 18.7477C0.137023 18.1049 0.0826171 17.4521 0 16.8042C0 16.2622 0 15.7201 0 15.1781C0.0523913 14.7146 0.0906772 14.2491 0.158181 13.7877C0.691162 10.1505 2.24678 7.02215 4.91068 4.48319C8.44709 1.11503 12.6837 -0.357968 17.535 0.0732522C21.4502 0.421856 24.8204 2.03793 27.5205 4.90131C31.4005 9.01504 32.7536 13.8985 31.6292 19.4298C30.9623 22.7113 29.319 25.481 26.8596 27.7479C24.2834 30.1217 21.2416 31.508 17.7516 31.8939C17.4423 31.9282 17.134 31.9654 16.8247 32.0017V31.9997ZM23.8864 22.5995C23.8955 22.5219 23.9096 22.4625 23.9096 22.402C23.9055 20.2348 23.9287 18.0666 23.8854 15.9005C23.8622 14.772 23.5318 13.7161 22.6854 12.9011C21.2175 11.4865 18.5133 11.7102 17.2085 13.3424C17.1299 13.4401 17.0503 13.5378 16.9214 13.698C16.8579 13.1419 16.8055 12.6824 16.7531 12.218H14.0177V22.5914H17.267C17.267 22.4443 17.267 22.3204 17.267 22.1965C17.267 20.3316 17.272 18.4656 17.2649 16.6007C17.2629 15.973 17.4523 15.437 17.9178 15.0048C18.6332 14.3408 20.1424 14.36 20.5213 15.6677C20.6099 15.975 20.6825 16.2994 20.6855 16.6158C20.7036 18.4908 20.7006 20.3668 20.7036 22.2428C20.7036 22.3627 20.7036 22.4816 20.7036 22.6005H23.8864V22.5995ZM8.90148 12.2119V22.6005H12.0571V12.2119H8.90148ZM8.79166 9.30319C8.79368 10.2452 9.47779 10.9041 10.4581 10.9072C11.4717 10.9112 12.2021 10.2311 12.1911 9.29311C12.18 8.35108 11.4666 7.67906 10.4833 7.6851C9.48686 7.69115 8.78864 8.35914 8.79066 9.30218L8.79166 9.30319Z"
+                                        fill="#715137" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_6364_2246">
+                                        <rect width="32.0101" height="32" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                                fill="none">
+                                <path
+                                    d="M15.9917 1.28518e-05C24.9337 -0.00649819 32.2436 7.35966 32.0623 16.2906C31.8919 24.6682 25.0691 31.7783 16.1075 31.8C7.13939 31.8195 -0.087554 24.5553 0.0107569 15.6395C0.111252 6.8518 7.3382 -0.0108389 15.9917 1.28518e-05ZM17.8269 26.8689C17.8269 25.9943 17.8269 25.1804 17.8269 24.3665C17.8269 23.5331 17.8269 22.6997 17.8247 21.8684C17.8247 21.0524 17.8247 20.2363 17.8247 19.4225C17.8247 18.5956 17.8072 17.7708 17.8247 16.894H21.1826C21.3508 15.5853 21.5124 14.32 21.685 12.9722H17.8356C17.8225 12.6119 17.805 12.3211 17.805 12.0303C17.8094 11.3357 17.7854 10.6391 17.8422 9.95106C17.9033 9.20663 18.3228 8.78775 19.0547 8.65319C19.3278 8.60327 19.6096 8.59242 19.8892 8.58808C20.3961 8.57723 20.9029 8.58808 21.4098 8.58374C21.5255 8.58374 21.6413 8.5577 21.7462 8.54467C21.8511 7.87838 21.8161 5.48448 21.685 5.05909C20.8876 5.01786 20.0705 4.95275 19.2535 4.9419C18.6811 4.93539 18.0956 4.94841 17.5341 5.05475C15.865 5.36729 14.6831 6.29185 14.0998 7.9131C13.8507 8.60761 13.7459 9.326 13.7415 10.0596C13.7371 10.8583 13.7481 11.657 13.7459 12.4535C13.7459 12.6032 13.7218 12.7552 13.7066 12.9375C12.588 12.9982 11.4935 12.9114 10.4142 12.9939V16.8853H13.7284C13.7415 17.1436 13.7568 17.3476 13.759 17.5516C13.7721 20.4664 13.7808 23.3833 13.7939 26.2981C13.7939 26.4804 13.818 26.6627 13.8333 26.8689H17.8269Z"
+                                    fill="#715137" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                                fill="none">
+                                <path
+                                    d="M32.0856 15.8429C32.1598 24.3777 25.0525 31.809 16.0271 31.8003C7.23953 31.7895 0.101691 24.8416 0.0645946 16.0076C0.0274979 7.09132 7.28972 -0.0560327 16.2824 0.000331079C25.1463 0.0566948 32.1423 7.31461 32.0856 15.8429ZM15.9529 23.3739C17.572 23.3393 18.9664 23.3219 20.3608 23.2742C21.5283 23.233 22.6979 23.1832 23.861 23.077C25.0699 22.9664 25.8992 22.3139 26.2658 21.1476C26.3858 20.7704 26.4818 20.3758 26.5254 19.9834C26.8397 17.1999 26.8484 14.4143 26.5189 11.6329C26.4578 11.1083 26.2505 10.5967 26.0716 10.0916C25.9428 9.72525 25.6722 9.4521 25.3536 9.21797C24.7666 8.78224 24.0923 8.63916 23.3853 8.61098C21.764 8.54377 20.1426 8.45273 18.5213 8.44189C16.1667 8.42671 13.8122 8.45923 11.4576 8.50475C10.4124 8.52426 9.36495 8.5893 8.32625 8.69986C7.10424 8.82993 6.25538 9.48028 5.89969 10.6791C5.77748 11.0932 5.67492 11.5202 5.6291 11.9473C5.34542 14.5747 5.36069 17.2064 5.60728 19.8339C5.6531 20.3281 5.7884 20.8224 5.93678 21.2993C6.22046 22.2272 6.87947 22.7821 7.81998 22.9859C8.32843 23.0943 8.85215 23.1745 9.37368 23.1918C11.6409 23.2699 13.9082 23.3219 15.9529 23.3761V23.3739Z"
+                                    fill="#715137" />
+                                <path
+                                    d="M19.4953 15.7744C17.6012 16.7976 15.8053 17.7666 14.0312 18.7248C13.9723 18.688 13.957 18.6815 13.9439 18.6706C13.9308 18.6598 13.909 18.6489 13.909 18.6359C13.8981 16.854 13.8894 15.0698 13.8828 13.2879C13.8828 13.1882 13.9025 13.0884 13.9221 12.8955C15.7813 13.845 17.5903 14.7729 19.4953 15.7722V15.7744Z"
+                                    fill="#715137" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- logo - social - copyright -->
+            <div class="grid grid-cols-2 mt-16">
+                <!-- first col -->
+                <div class="flex items-center">
+                    <a href="/">
+                        <figure class="max-w-[128px]"><img src="/assets/image/header-logo.svg" alt="logo"></figure>
+                    </a>
+                </div>
+                <!-- third col -->
+                <div class="flex items-end">
+                    <p class="text-body-xxs-regular uppercase text-primary-text">
+                        Copyright © 2025. <a href="#" class="link-text inline-block">BRG Hospitality</a>. All Rights
+                        Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- header script -->
+    <script defer src="/assets/js/header-scroll.js"></script>
+    <script defer src="/assets/js/sub-menu.js"></script>
+    <script defer src="/assets/js/header.js"></script>
+    <script defer src="/assets/js/input-focus.js"></script>
+
+    <!-- swiper script -->
+    <script defer>
+        const swiper = new Swiper('#home-swiper', {
+            slidesPerView: 1,
+            navigation: true,
+            loop: true,
+            autoplay: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        const swiper2 = new Swiper('#exclusive-offer-swiper', {
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 24,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1280: {
+                    slidesPerView: 2,
+                    spaceBetween: 102,
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChange: function () {
+                    const current = this.realIndex + 1;
+                    const total = this.slides.length;
+                    document.querySelector('.number.swiper-pagination').innerText = `${current} — ${total}`;
+                },
+            },
+        });
+
+    </script>
+
+</body>
+
+</html>

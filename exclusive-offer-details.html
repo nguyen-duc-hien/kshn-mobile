@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Offers details</title>
+    <!-- taildwind css import -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind.config.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/style/main.css" />
+
+    <!-- font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- fancy box -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+        integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="lg:px-5 lg:pb-5 bg-body-color">
+    <header>
+        <div class="header">
+            <!-- header pc -->
+            <div class="header-pc hidden lg:block fixed top-0 w-full z-[5]">
+                <div class="container grid grid-cols-12 gap-6 py-[5px]">
+                    <div class="hidden lg:block lg:col-span-4 xl:col-span-5 3xl:col-span-6"></div>
+                    <div
+                        class="col-span-12 lg:col-span-8 xl:col-span-7 3xl:col-span-6 flex items-center gap-10 justify-between">
+                        <div class="flex items-center gap-10 lg:gap-[77px]">
+                            <a href="#" class="text-body-xxs-regular uppercase text-primary-text">about hanoi legend
+                                suites</a>
+                            <a href="#"
+                                class="flex items-center gap-2 text-body-xxs-regular uppercase text-primary-text">Destinations
+                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.10156H0V3.10156H6V4.10156Z"
+                                        fill="#C1AB91" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.40039 6.5L2.40039 0.5L3.40039 0.5L3.40039 6.5L2.40039 6.5Z"
+                                        fill="#C1AB91" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-10">
+                            <button class="bg-trans">
+                                <figure class="w-6 h-6"><img src="/assets/image/icon/3bar-primary.svg" alt="icon">
+                                </figure>
+                            </button>
+                            <select name="language" id="language-select" class="input-language px-1">
+                                <option value="1" selected="">EN</option>
+                                <option value="2">VN</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container flex items-center justify-between py-2 gap-10">
+                    <a href="/">
+                        <figure class="max-w-[128px]"><img src="/assets/image/header-logo.svg" alt="logo"></figure>
+                    </a>
+                    <nav class="">
+                        <ul class="flex items-center justify-between gap-4 2xl:gap-6">
+                            <li class="">
+                                <a href="#" class="link-nav">ACCOMmODATION</a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="link-nav">DRINK & DINE</a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="link-nav">CELEBRATION & EVENTS</a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="link-nav">WELLNESS</a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="link-nav">EXCLUSIVE OFFERS</a>
+                            </li>
+                            <li class="">
+                                <a href="#" class="link-nav">EXPERIENCES</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="flex items-center gap-2">
+                        <a href="#" class="button bg-secondary px-2.5">CONNECT WITH
+                            US</a>
+                        <button class="button px-[22px]">book
+                            <figure><img src="/assets/image/icon/triangle-down-white.svg" alt="icon"></figure>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- header-mobile -->
+            <div class="w-full lg:hidden header-mobile fixed top-0 z-[5] ">
+                <div class="container flex justify-between py-5">
+                    <a href="/">
+                        <div class="logo">
+                            <figure class="max-w-[60px]">
+                                <img src="/assets/image/header-logo.svg" alt="logo">
+                            </figure>
+                        </div>
+                    </a>
+                    <button class="breadcrumb-button">
+                        <figure>
+                            <img src="/assets/image/icon/3bar.svg" alt="">
+                        </figure>
+                    </button>
+                </div>
+                <div
+                    class="breadcrumb-header hidden fixed w-[70vw] max-w-[350px] h-[100vh] top-0 right-0 z-[5] transform transition-transform duration-300 ease-in-out translate-x-full">
+                    <div class=" flex flex-col gap-10 bg-neutralc-500 w-full h-full p-6">
+                        <div class="flex items-center justify-between">
+                            <a href="/">
+                                <div class="logo">
+                                    <figure class="max-w-[60px]">
+                                        <img src="/assets/image/header-logo.svg" alt="logo">
+                                    </figure>
+                                </div>
+                            </a>
+                            <button class="breadcrumb-close">
+                                <figure class="w-8 h-8">
+                                    <img src="/assets/image/icon/close.svg" alt="">
+                                </figure>
+                            </button>
+                        </div>
+
+                        <div class="breadcrumb-container custom-scrollbar">
+                            <nav>
+                                <ul class="flex flex-col justify-between gap-4">
+                                    <li class="text-body-lg-bold">
+                                        <a href="#" class="link-nav home">Products</a>
+                                    </li>
+                                    <li class="text-body-lg-bold">
+                                        <a href="#" class="link-nav home">Promotions</a>
+                                    </li>
+                                    <li class="text-body-lg-bold">
+                                        <a href="#" class="link-nav home">About us</a>
+                                    </li>
+                                    <li class="text-body-lg-bold">
+                                        <a href="#" class="link-nav home">Skincare Tips</a>
+                                    </li>
+                                    <li class="text-body-lg-bold">
+                                        <a href="#" class="link-nav home">Blogs</a>
+                                    </li>
+                                    <li class="text-body-lg-bold">
+                                        <a href="#" class="link-nav home">FAQs</a>
+                                    </li>
+                                    <li class="text-body-lg-bold">
+                                        <a href="#" class="link-nav home">Contact us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div class="w-full flex flex-col items-center justify-between gap-10 py-4">
+                                <div class="flex flex-col items-center justify-center gap-4">
+                                    <a href="#" class="link-light">
+                                        <figure class="w-6 h-6"><img src="/assets/image/icon/phone-white.svg"
+                                                alt="icon">
+                                        </figure>
+                                        (678) 800-4332
+                                    </a>
+                                    <a href="#" class="link-light">
+                                        <figure class="w-6 h-6"><img src="/assets/image/icon/letter-white.svg"
+                                                alt="icon">
+                                        </figure>
+                                        usmaximatlanta@gmail.com
+                                    </a>
+                                </div>
+                                <div class="social-list">
+                                    <a href="#" class="social-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M12.5 10C12.5 10.4945 12.3534 10.9778 12.0787 11.3889C11.804 11.8 11.4135 12.1205 10.9567 12.3097C10.4999 12.4989 9.99723 12.5484 9.51227 12.452C9.02732 12.3555 8.58186 12.1174 8.23223 11.7678C7.8826 11.4181 7.6445 10.9727 7.54804 10.4877C7.45157 10.0028 7.50108 9.50011 7.6903 9.04329C7.87952 8.58648 8.19995 8.19603 8.61107 7.92133C9.0222 7.64662 9.50555 7.5 10 7.5C10.6628 7.50076 11.2983 7.76439 11.7669 8.23307C12.2356 8.70175 12.4992 9.33719 12.5 10ZM17.8125 6.5625V13.4375C17.8112 14.5974 17.3498 15.7095 16.5296 16.5296C15.7095 17.3498 14.5974 17.8112 13.4375 17.8125H6.5625C5.40258 17.8112 4.29055 17.3498 3.47036 16.5296C2.65017 15.7095 2.18881 14.5974 2.1875 13.4375V6.5625C2.18881 5.40258 2.65017 4.29055 3.47036 3.47036C4.29055 2.65017 5.40258 2.18881 6.5625 2.1875H13.4375C14.5974 2.18881 15.7095 2.65017 16.5296 3.47036C17.3498 4.29055 17.8112 5.40258 17.8125 6.5625ZM13.75 10C13.75 9.25832 13.5301 8.5333 13.118 7.91661C12.706 7.29993 12.1203 6.81928 11.4351 6.53545C10.7498 6.25162 9.99584 6.17736 9.26841 6.32206C8.54098 6.46675 7.8728 6.8239 7.34835 7.34835C6.8239 7.8728 6.46675 8.54098 6.32206 9.26841C6.17736 9.99584 6.25162 10.7498 6.53545 11.4351C6.81928 12.1203 7.29993 12.706 7.91661 13.118C8.5333 13.5301 9.25832 13.75 10 13.75C10.9942 13.7489 11.9474 13.3534 12.6504 12.6504C13.3534 11.9474 13.7489 10.9942 13.75 10ZM15 5.9375C15 5.75208 14.945 5.57082 14.842 5.41665C14.739 5.26248 14.5926 5.14232 14.4213 5.07136C14.25 5.00041 14.0615 4.98184 13.8796 5.01801C13.6977 5.05419 13.5307 5.14348 13.3996 5.27459C13.2685 5.4057 13.1792 5.57275 13.143 5.7546C13.1068 5.93646 13.1254 6.12496 13.1964 6.29627C13.2673 6.46757 13.3875 6.61399 13.5417 6.717C13.6958 6.82002 13.8771 6.875 14.0625 6.875C14.3111 6.875 14.5496 6.77623 14.7254 6.60041C14.9012 6.4246 15 6.18614 15 5.9375Z"
+                                                fill="#1C1C1C" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17"
+                                            viewBox="0 0 10 17" fill="none">
+                                            <path
+                                                d="M8.91497 9.04166L9.37091 6.1448H6.56234V4.26184C6.56234 3.46973 6.95444 2.69572 8.20827 2.69572H9.50313V0.228862C8.74906 0.108616 7.98712 0.043563 7.22344 0.0342293C4.91185 0.0342293 3.4027 1.42382 3.4027 3.93594V6.1448H0.840332V9.04166H3.4027V16.0485H6.56234V9.04166H8.91497Z"
+                                                fill="#1C1C1C" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17"
+                                            viewBox="0 0 14 17" fill="none">
+                                            <path
+                                                d="M4.86676 10.2518L5.61745 10.0812C5.63313 10.0777 5.65966 10.0718 5.69101 10.0617C5.89836 10.0071 6.07603 9.87553 6.18659 9.69477C6.29716 9.514 6.33198 9.29814 6.28372 9.09265L6.2807 9.07962C6.25589 8.98117 6.21253 8.88815 6.15288 8.80538C6.06882 8.70056 5.96478 8.61285 5.84657 8.54712C5.7074 8.46922 5.56177 8.40304 5.41123 8.34929L4.5882 8.05372C4.12633 7.88491 3.66446 7.72084 3.19777 7.56032C2.89569 7.45488 2.63943 7.36189 2.41694 7.29377C2.37459 7.28226 2.33257 7.26962 2.29092 7.25586C2.022 7.17531 1.83267 7.14155 1.67289 7.14036C1.56609 7.13646 1.45972 7.15546 1.36116 7.19604C1.25818 7.23983 1.16574 7.30441 1.08982 7.38558C1.05216 7.42758 1.01674 7.47147 0.983702 7.51708C0.919465 7.61403 0.866478 7.71774 0.825729 7.82627C0.672817 8.26993 0.596594 8.73562 0.600221 9.20401C0.603236 9.62692 0.614692 10.1701 0.851655 10.5385C0.908937 10.6333 0.985513 10.715 1.07656 10.7784C1.24539 10.8927 1.41542 10.9081 1.5933 10.9206C1.8586 10.9389 2.11486 10.8755 2.37111 10.8169L4.86495 10.2512L4.86676 10.2518ZM13.2419 6.33717C13.037 5.91464 12.7614 5.52883 12.4267 5.19577C12.3834 5.15341 12.3371 5.11422 12.288 5.07849C12.2427 5.04509 12.1956 5.01405 12.1469 4.9855C12.0968 4.95854 12.0453 4.93422 11.9925 4.91264C11.8884 4.87244 11.7769 4.85427 11.6651 4.85933C11.5584 4.86526 11.4541 4.89487 11.3594 4.94404C11.2165 5.01393 11.0616 5.12647 10.8554 5.31424C10.827 5.34207 10.7914 5.37347 10.7589 5.40308C10.5895 5.56005 10.4001 5.75374 10.1752 5.97882C9.82731 6.32414 9.48543 6.67124 9.14476 7.02131L8.53578 7.64206C8.42457 7.75528 8.32331 7.87753 8.23309 8.00752C8.15584 8.11752 8.10115 8.24125 8.0721 8.3718C8.05579 8.47209 8.05824 8.57446 8.07933 8.67388L8.08235 8.68691C8.13047 8.89218 8.2578 9.0711 8.43752 9.186C8.61724 9.3009 8.83533 9.34282 9.04588 9.30293C9.07122 9.29942 9.09638 9.29467 9.12125 9.28871L12.3664 8.55186C12.6226 8.49381 12.8819 8.44051 13.1116 8.30901C13.266 8.22194 13.4125 8.13487 13.5132 7.95954C13.5668 7.86297 13.5993 7.75643 13.6085 7.6468C13.6585 7.21203 13.4276 6.71863 13.2419 6.33717ZM7.43236 7.6776C7.66751 7.38736 7.66751 6.95496 7.68801 6.60076C7.75916 5.41908 7.83333 4.2374 7.89302 3.05512C7.91533 2.60733 7.96417 2.16546 7.93703 1.71411C7.91472 1.34213 7.91232 0.914475 7.67294 0.608837C7.25087 0.0698251 6.35004 0.114249 5.73563 0.198359C5.54609 0.224078 5.35795 0.258869 5.17186 0.302607C4.98494 0.346439 4.79923 0.394417 4.61835 0.451872C4.02865 0.641415 3.19958 0.9897 3.05969 1.65725C2.9801 2.03455 3.16823 2.42015 3.31294 2.76489C3.4896 3.18188 3.73019 3.558 3.94966 3.95071C4.53031 4.98787 5.12121 6.0191 5.7103 7.05092C5.88697 7.35893 6.07811 7.74868 6.41878 7.9086C6.4417 7.91808 6.46461 7.92637 6.48812 7.93407C6.64067 7.99093 6.80769 8.0016 6.96627 7.96546L6.99461 7.95954C7.14173 7.91986 7.27438 7.84108 7.37869 7.73268C7.39799 7.71491 7.41548 7.69714 7.43296 7.6776H7.43236ZM7.15077 10.8412C7.059 10.7144 6.92874 10.6193 6.77863 10.5696C6.62852 10.5199 6.46626 10.5182 6.31507 10.5646C6.2795 10.5761 6.24484 10.5901 6.21136 10.6066C6.15955 10.6326 6.11012 10.6629 6.06364 10.6972C5.9309 10.8 5.81233 10.9193 5.71091 11.052C5.68498 11.0846 5.66086 11.1279 5.62951 11.1563L5.10734 11.8612C4.81189 12.2568 4.51946 12.6531 4.23064 13.0553C4.04131 13.3153 3.87851 13.5351 3.74888 13.7287C3.72476 13.7655 3.69943 13.8057 3.67652 13.8389C3.52156 14.0735 3.43413 14.2453 3.38891 14.3981C3.35513 14.4996 3.34442 14.6072 3.35755 14.7132C3.37203 14.8234 3.41001 14.9294 3.4685 15.0247C3.49985 15.0721 3.53362 15.1183 3.5698 15.1628C3.64794 15.2511 3.73592 15.3306 3.83209 15.3997C4.19266 15.6461 4.58699 15.8232 5.00183 15.96C5.34732 16.0726 5.70608 16.1401 6.06907 16.1602C6.13117 16.1632 6.19327 16.162 6.25478 16.1567C6.31181 16.1514 6.36855 16.1435 6.42481 16.133C6.4811 16.1201 6.53665 16.1043 6.59123 16.0856C6.69733 16.0465 6.79388 15.986 6.87462 15.9079C6.95119 15.8327 7.01029 15.742 7.04707 15.6419C7.10736 15.4939 7.14716 15.3067 7.17369 15.0283C7.1755 14.9886 7.18152 14.9412 7.18575 14.898C7.20625 14.667 7.2159 14.3945 7.23037 14.0758C7.25629 13.5848 7.27619 13.0961 7.29187 12.6063L7.32563 11.7344C7.33347 11.5342 7.32684 11.3115 7.27016 11.1119C7.24524 11.016 7.20494 10.9246 7.15077 10.8412ZM13.0435 12.2053C12.935 12.0874 12.7806 11.9707 12.537 11.8262C12.502 11.8067 12.4604 11.7812 12.4225 11.7587C12.2199 11.6384 11.9757 11.5129 11.6905 11.3606C11.2521 11.1237 10.8138 10.8939 10.3706 10.6653L9.58854 10.2577C9.54814 10.2459 9.50714 10.2175 9.46855 10.1991C9.31818 10.1237 9.15846 10.0677 8.99342 10.0327C8.93656 10.0219 8.87887 10.0159 8.82098 10.0149C8.78349 10.0147 8.74603 10.0169 8.70882 10.0214C8.55226 10.0452 8.40734 10.1169 8.29473 10.2263C8.18212 10.3358 8.10758 10.4774 8.08174 10.6309C8.07029 10.7286 8.07391 10.8276 8.0932 10.9235C8.13119 11.1285 8.22404 11.3304 8.32052 11.5075L8.73777 12.277C8.97051 12.7105 9.20566 13.1418 9.44684 13.5718C9.60241 13.852 9.73205 14.0918 9.85324 14.2909C9.87615 14.3282 9.90208 14.3685 9.92198 14.4034C10.0697 14.6421 10.1879 14.7926 10.3079 14.901C10.3878 14.9765 10.4837 15.0337 10.5888 15.0685C10.6939 15.1033 10.8055 15.1149 10.9157 15.1023C10.973 15.0955 11.03 15.0856 11.0863 15.0727C11.2016 15.0424 11.3131 14.9993 11.4185 14.9442C11.7359 14.7694 12.0284 14.5543 12.2886 14.3045C12.6009 14.0024 12.8771 13.6731 13.0917 13.2964C13.1219 13.243 13.1472 13.188 13.1689 13.1305C13.1891 13.0779 13.2066 13.0243 13.2214 12.97C13.234 12.9143 13.2437 12.8586 13.2503 12.8024C13.2611 12.6918 13.2482 12.5802 13.2123 12.4748C13.1769 12.3737 13.1193 12.2815 13.0435 12.2047V12.2053Z"
+                                                fill="#1C1C1C" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- holder header -->
+            <div class="h-[70px] lg:h-[114px]"></div>
+        </div>
+    </header>
+    <main>
+        <!-- -------------------- section 1 -------------------- -->
+        <section class="">
+            <!-- Slider main container -->
+            <div id="home-swiper" class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <figure><img src="/assets/image/home-banner.png" alt="banner"></figure>
+                    </div>
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <figure><img src="/assets/image/home-banner.png" alt="banner"></figure>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination home"></div>
+            </div>
+        </section>
+        <!-- -------------------- section 2 -------------------- -->
+        <section class="py-10 lg:pt-[120px] lg:pb-[160px]">
+            <div class="container">
+                <div class="flex flex-col items-center justify-center">
+                    <p class="text-body-xs-semibold font-basker text-primary text-center uppercase">
+                        Exclusive Offers
+                    </p>
+                    <h1 class="mt-6 text-heading-h1 text-primary uppercase text-center">
+                        Stay Longer
+                    </h1>
+                    <p class="mt-6 text-body-xs-regular text-primary-text text-center">
+                        Available until 30 September 2025
+                        <br>
+                        <br>
+                        Experience the city in greater depth with two complimentary
+                        nights and a host of
+                        exclusive benefits for longer stays.
+                    </p>
+                </div>
+
+                <div class="mt-10 lg:mt-[68px] grid grid-cols-12 gap-6">
+                    <div class="col-span-12 lg:col-span-6 lg:max-w-[486px]">
+                        <h2 class="text-heading-h2 lg:text-[52px] text-primary uppercase">
+                            What's included
+
+                        </h2>
+                        <p class="mt-8 text-body-xs-regular text-primary-text">
+                            Whether visiting on business or wanting to experience every facet of Hanoi’s capital, savour
+                            an all-encompassing
+                            7-night’s stay with two complimentary night, daily breakfast and a 10% discount on dining,
+                            spa treatments and laundry
+                            services.
+                        </p>
+                        <ul class="mt-8 list-disc pl-5">
+                            <li class="p-2 border-b border-solid border-fill text-body-xs-regular text-primary-text">
+                                Two complimentary night
+                            </li>
+                            <li class="p-2 border-b border-solid border-fill text-body-xs-regular text-primary-text">
+                                Daily breakfast
+                            </li>
+                            <li class="p-2 border-b border-solid border-fill text-body-xs-regular text-primary-text">
+                                10% discount at Janu Tokyo dining venues and on spa treatments
+                            </li>
+                            <li class="p-2 border-b border-solid border-fill text-body-xs-regular text-primary-text">
+                                Waivered in-room dining delivery fee
+                            </li>
+                            <li class="p-2 border-b border-solid border-fill text-body-xs-regular text-primary-text">
+                                10% discount on laundry service 
+                            </li>
+                        </ul>
+                        <div class="mt-12 flex flex-wrap sm:flex-nowrap items-center gap-4">
+                            <a href="#" class="w-[140px] button border-primary text-primary-text">Enquire Now</a>
+                            <!-- <a href="#" class="w-[140px] button border-primary text-primary-text">menu</a> -->
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-6">
+                        <figure class="rounded-[4px] overflow-hidden"><img class="min-w-full"
+                                src="/assets/image/exclusive-img.png" alt="img">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 3 -------------------- -->
+
+        <!-- -------------------- section 4 -------------------- -->
+
+        <!-- -------------------- section 5 -------------------- -->
+
+        <!-- -------------------- section 6 -------------------- -->
+
+        <!-- -------------------- section 7 -------------------- -->
+
+        <!-- -------------------- section 8 -------------------- -->
+
+
+
+    </main>
+    <footer class="footer bg-fill rounded-[4px] py-10 xl:pt-20 pb-6 xl:pb-[58px]">
+        <div class="container">
+            <div
+                class="bg-primary-50 rounded-[4px] p-6 md:px-10 xl:px-12 2xl:px-[102px] md:py-6 xl:py-8 2xl:py-[66px] flex flex-col lg:flex-row items-center gap-10 justify-between">
+                <div class="flex flex-col gap-3 lg:max-w-[353px]">
+                    <h2 class="text-body-3xl-medium text-primary">
+                        Connect with us
+                    </h2>
+                    <p class="text-body-xs-regular text-primary-text">Sign up for exclusive updates from the world of
+                        Janu, including events, new offers and early access to our unique
+                        experiences.</p>
+                </div>
+                <form class="w-full lg:max-w-[384px] h-fit flex items-center border-b border-solid border-primary">
+                    <label class="input-label flex-1">
+                        <input type="text" class="input-field transparent uppercase"
+                            placeholder="ENTER YOUR EMAIL ADDRESS">
+                    </label>
+                    <div class="border-l border-solid border-primary pl-3 pb-2">
+                        <button class="button pl-[23px] pr-4">SIGN UP
+                            <figure><img src="/assets/image/icon/triangle-down-white.svg" alt="icon"></figure>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- more info -->
+            <div class="grid grid-cols-12 gap-6 mt-10 lg:mt-16">
+                <!-- first col -->
+                <div class="col-span-12 sm:col-span-6 lg:col-span-3 lg:max-w-[132px] flex flex-col gap-8">
+                    <h2 class="text-body-xs-semibold text-primary">
+                        HANOI LEGEND SUITES
+                    </h2>
+                    <ul class="flex flex-col gap-2 uppercase">
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">About us</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Careers</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Accommodation</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Drink & Dine</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Wellness</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Inspiring stories</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Exclusive offers</a>
+                        </li>
+                        <li class="text-body-xs-regular">
+                            <a href="#" class="link-text">Privacy policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- second col -->
+                <div class="col-span-12 sm:col-span-6 lg:col-span-4 lg:max-w-[186px] flex flex-col gap-11">
+                    <div class=" flex flex-col gap-8">
+                        <h2 class="text-body-xs-semibold text-primary">
+                            CONTACT US
+                        </h2>
+                        <div class="flex flex-col gap-2">
+                            <div class="text-body-xs-regular text-primary-text flex items-center gap-1">
+                                Tel: <a href="#" class="link-text">(+84) 24 3939 3691</a>
+                            </div>
+                            <div class="text-body-xs-regular text-primary-text">
+                                For reservations:<a href="#" class="link-text">booking@hanoilegendsuites.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <h2 class="text-body-xs-semibold text-primary">
+                            CONTACT US
+                        </h2>
+                        <div class="flex flex-col gap-5">
+                            <a href="#" class="link-text text-body-xs-regular">Hanoi Legend Suites</a>
+                            <a href="#" class="button px-[22px]">FACTSHEET
+                                <figure><img src="/assets/image/icon/triangle-down-white.svg" alt="icon"></figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- third col -->
+                <div class="col-span-12 lg:col-span-5 lg:max-w-[458px] flex flex-col gap-8">
+                    <h2 class="text-body-xs-semibold text-primary">
+                        HANOI LEGEND SUITES
+                    </h2>
+                    <div class="grid grid-cols-2 gap-10 lg:flex lg:flex-row 2xl:gap-[61px]">
+                        <ul class="flex flex-col gap-2">
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Diamond Westlake Suites</a>
+                            </li>
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Thang Loi Hotel Hanoi</a>
+                            </li>
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Oriental Palace Apartments Hanoi</a>
+                            </li>
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Legend Valley Hotel Ha Nam</a>
+                            </li>
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Century Riverside Hotel Hue</a>
+                            </li>
+                        </ul>
+                        <ul class="flex flex-col gap-2">
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Mondial Hotel Hue</a>
+                            </li>
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Grand Hotel Vung Tau</a>
+                            </li>
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Palace Hotel Vung Tau</a>
+                            </li>
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Rex Hotel Vung Tau</a>
+                            </li>
+                            <li class="text-body-xs-regular">
+                                <a href="#" class="link-text">Ocean Sunrise Apartments Vung Tau</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- logo - social - copyright -->
+            <div class="grid grid-cols-12 gap-6 mt-10 lg:mt-16">
+                <!-- first col -->
+                <div class="col-span-12 sm:col-span-6 lg:col-span-3 flex items-center">
+                    <a href="/">
+                        <figure class="max-w-[128px]"><img src="/assets/image/header-logo.svg" alt="logo"></figure>
+                    </a>
+                </div>
+                <!-- second col -->
+                <div class="col-span-12 sm:col-span-6 lg:col-span-4 flex items-center">
+
+                    <div class="flex items-center gap-10">
+                        <p class="text-body-xxs-regular uppercase text-primary-text">
+                            Connect with us
+                        </p>
+                        <div class="social-list">
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_5468_26013)">
+                                        <path
+                                            d="M12.6178 23.9998H11.3982C11.0506 23.9605 10.7014 23.9303 10.3546 23.8804C7.62825 23.4829 5.29557 22.3056 3.37775 20.3243C1.67377 18.5644 0.613606 16.4721 0.187423 14.0608C0.102035 13.5787 0.0612304 13.089 -0.000732422 12.6032C-0.000732422 12.1966 -0.000732422 11.7901 -0.000732422 11.3836C0.0385611 11.036 0.0672755 10.6868 0.117904 10.3408C0.517639 7.61289 1.68435 5.26661 3.68228 3.36239C6.33458 0.836275 9.51207 -0.268476 13.1505 0.0549392C16.0869 0.316392 18.6146 1.52844 20.6397 3.67598C23.5497 6.76128 24.5645 10.4239 23.7212 14.5724C23.221 17.0335 21.9885 19.1108 20.144 20.811C18.2118 22.5913 15.9305 23.631 13.313 23.9204C13.081 23.9461 12.8497 23.9741 12.6178 24.0013V23.9998ZM17.9141 16.9496C17.9209 16.8914 17.9314 16.8469 17.9314 16.8015C17.9284 15.1761 17.9458 13.55 17.9133 11.9253C17.8959 11.079 17.6481 10.2871 17.0133 9.6758C15.9124 8.61487 13.8842 8.78262 12.9057 10.0068C12.8467 10.0801 12.787 10.1534 12.6903 10.2735C12.6427 9.8564 12.6034 9.51182 12.5641 9.16347H10.5125V16.9436H12.9495C12.9495 16.8333 12.9495 16.7403 12.9495 16.6474C12.9495 15.2487 12.9533 13.8492 12.948 12.4505C12.9465 11.9798 13.0885 11.5778 13.4376 11.2536C13.9741 10.7556 15.1061 10.77 15.3902 11.7508C15.4567 11.9813 15.5111 12.2246 15.5134 12.4619C15.527 13.8681 15.5247 15.2751 15.527 16.6821C15.527 16.772 15.527 16.8612 15.527 16.9504H17.9141V16.9496ZM6.67538 9.15894V16.9504H9.04206V9.15894H6.67538ZM6.59302 6.97739C6.59453 7.68392 7.10761 8.17811 7.84285 8.18038C8.60303 8.1834 9.15087 7.67334 9.14256 6.96984C9.13424 6.26331 8.59925 5.75929 7.86174 5.76383C7.11441 5.76836 6.59075 6.26935 6.59226 6.97664L6.59302 6.97739Z"
+                                            fill="#715137" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_5468_26013">
+                                            <rect width="24.0076" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                    fill="none">
+                                    <path
+                                        d="M11.9943 9.63887e-06C18.7007 -0.00487365 24.1832 5.51975 24.0472 12.218C23.9194 18.5011 18.8023 23.8337 12.0811 23.85C5.35503 23.8646 -0.0651772 18.4165 0.00855594 11.7297C0.0839276 5.13885 5.50414 -0.00812917 11.9943 9.63887e-06ZM13.3706 20.1517C13.3706 19.4957 13.3706 18.8853 13.3706 18.2749C13.3706 17.6498 13.3706 17.0248 13.369 16.4013C13.369 15.7893 13.369 15.1773 13.369 14.5668C13.369 13.9467 13.3559 13.3281 13.369 12.6705H15.8874C16.0136 11.689 16.1348 10.74 16.2643 9.72914H13.3772C13.3674 9.45893 13.3543 9.24081 13.3543 9.02269C13.3575 8.50181 13.3395 7.9793 13.3821 7.4633C13.428 6.90497 13.7426 6.59082 14.2915 6.48989C14.4963 6.45246 14.7077 6.44432 14.9174 6.44106C15.2975 6.43292 15.6777 6.44106 16.0578 6.43781C16.1446 6.43781 16.2315 6.41827 16.3101 6.40851C16.3888 5.90878 16.3626 4.11336 16.2643 3.79432C15.6662 3.76339 15.0534 3.71456 14.4406 3.70642C14.0113 3.70154 13.5722 3.71131 13.1511 3.79107C11.8993 4.02546 11.0128 4.71889 10.5753 5.93483C10.3885 6.45571 10.3099 6.9945 10.3066 7.54468C10.3033 8.1437 10.3115 8.74272 10.3099 9.34011C10.3099 9.45242 10.2919 9.56636 10.2804 9.7031C9.44149 9.74867 8.62059 9.68356 7.81116 9.74542V12.664H10.2968C10.3066 12.8577 10.3181 13.0107 10.3197 13.1637C10.3296 15.3498 10.3361 17.5375 10.3459 19.7236C10.3459 19.8603 10.364 19.9971 10.3754 20.1517H13.3706Z"
+                                        fill="#715137" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                    fill="none">
+                                    <path
+                                        d="M24.0647 11.8822C24.1203 18.2832 18.7899 23.8567 12.0208 23.8502C5.43014 23.8421 0.0767568 18.6312 0.0489342 12.0057C0.0211117 5.31849 5.46778 -0.0420245 12.2123 0.00024831C18.8602 0.0425211 24.1072 5.48596 24.0647 11.8822ZM11.9652 17.5305C13.1795 17.5044 14.2253 17.4914 15.2711 17.4557C16.1467 17.4248 17.0239 17.3874 17.8963 17.3077C18.8029 17.2248 19.4249 16.7354 19.6998 15.8607C19.7898 15.5778 19.8618 15.2819 19.8946 14.9876C20.1302 12.9 20.1368 10.8107 19.8897 8.72471C19.8438 8.33124 19.6884 7.94754 19.5542 7.56871C19.4576 7.29393 19.2547 7.08907 19.0157 6.91348C18.5755 6.58668 18.0697 6.47937 17.5395 6.45823C16.3235 6.40783 15.1075 6.33954 13.8915 6.33141C12.1255 6.32003 10.3596 6.34442 8.59372 6.37857C7.80978 6.3932 7.0242 6.44197 6.24517 6.52489C5.32867 6.62245 4.69202 7.11021 4.42525 8.00932C4.3336 8.31986 4.25668 8.64016 4.22231 8.96046C4.00955 10.931 4.02101 12.9048 4.20595 14.8754C4.24031 15.2461 4.34178 15.6168 4.45307 15.9745C4.66584 16.6704 5.16009 17.0866 5.86548 17.2394C6.24681 17.3207 6.6396 17.3809 7.03075 17.3939C8.7312 17.4524 10.4316 17.4914 11.9652 17.5321V17.5305Z"
+                                        fill="#715137" />
+                                    <path
+                                        d="M14.6215 11.831C13.2009 12.5985 11.854 13.3252 10.5234 14.0439C10.4792 14.0162 10.4678 14.0113 10.4579 14.0032C10.4481 13.9951 10.4317 13.987 10.4317 13.9772C10.4236 12.6407 10.417 11.3026 10.4121 9.96616C10.4121 9.89137 10.4268 9.81658 10.4416 9.67188C11.836 10.384 13.1927 11.0799 14.6215 11.8294V11.831Z"
+                                        fill="#715137" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- third col -->
+                <div class="col-span-12 lg:col-span-5 flex items-center">
+                    <p class="text-body-xxs-regular uppercase text-primary-text">
+                        Copyright © 2025. <a href="#" class="link-text inline-block">BRG Hospitality</a>. All Rights
+                        Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- header script -->
+    <script defer src="/assets/js/header-scroll.js"></script>
+    <script defer src="/assets/js/sub-menu.js"></script>
+    <script defer src="/assets/js/header.js"></script>
+    <script defer src="/assets/js/accordion.js"></script>
+
+    <!-- swiper script -->
+    <script defer>
+        const swiper = new Swiper('#home-swiper', {
+            slidesPerView: 1,
+            navigation: true,
+            loop: true,
+            autoplay: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+
+</html>
