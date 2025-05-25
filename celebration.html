@@ -257,193 +257,258 @@
             </div>
         </section>
         <!-- -------------------- section 3 -------------------- -->
-        <section class="py-16 lg:pt-[50px] lg:pb-[293px]">
+
+        <section class="pt-16">
             <div class="container">
                 <h2 class="text-body-3xl-medium font-basker text-primary uppercase">
                     Lay-out
                 </h2>
+            </div>
 
-                <div class="mt-4 lg:mt-8 rounded-[4px] bg-fill grid grid-cols-12 gap-6 py-10 lg:py-24">
-                    <div class="col-span-1 lg:col-span-2"></div>
-                    <div class="col-span-10 lg:col-span-8 w-full mx-auto overflow-x-auto custom-scrollbar">
-                        <style>
-                            .table-head {
-                                text-align: center;
-                                vertical-align: middle;
-                                padding-top: 16px;
-                                padding-bottom: 12px;
-                                border-bottom: 1px solid #a6a6a6;
-                                font-size: 12px;
-                                line-height: 166.7%;
-                                font-weight: 600;
-                                color: #4F4F4F;
-                                text-transform: uppercase;
-                            }
+            <div class="mt-4 lg:mt-8 bg-fill">
+                <style>
+                    .table-mobile-head {
+                        display: grid;
+                        grid-template-columns: 40% 25% 25% 10%;
+                        padding: 16px;
+                        border-bottom: 1px solid #715137;
+                    }
 
-                            .table-head:first-child {
-                                text-align: start;
-                            }
+                    .table-mobile-content {}
 
-                            .table-head.center {
-                                text-align: center;
-                            }
+                    .table-mobile-row {
+                        display: grid;
+                        grid-template-columns: 40% 25% 25% 10%;
+                        padding: 17px 16px 11px 16px;
+                        border-bottom: 1px solid #FCFAF7;
+                    }
 
-                            .table-head.first {
-                                text-align: center;
-                                vertical-align: middle;
-                                padding-bottom: 10px;
-                                font-weight: 700;
-                                border-bottom: 1px solid #d7d7d7;
-                            }
+                    .sub-content {
+                        padding-left: 22px;
+                        grid-column: span 4;
+                        width: 100%;
+                        max-height: 0;
+                        opacity: 0;
+                        overflow: hidden;
+                        transition: all .4s ease;
+                    }
 
-                            .table-body tr td {
-                                text-align: center;
-                                vertical-align: middle;
-                                padding-top: 16px;
-                                padding-bottom: 12px;
-                                border-bottom: 1px solid #d7d7d7;
-                                font-size: 12px;
-                                line-height: 166.7%;
-                                font-weight: 600;
-                                color: #4F4F4F;
-                                text-transform: uppercase;
-                            }
+                    .sub-content.active {
+                        max-height: 1000px;
+                        opacity: 1;
+                        transition: all .4s ease;
+                    }
 
-                            .table-body tr td:first-child {
-                                text-align: start;
-                                vertical-align: middle;
-                            }
+                    .sub-content .row {
+                        display: flex;
+                        align-items: center;
+                    }
 
-                            .table-body tr td.center {
-                                text-align: center;
-                            }
+                    .sub-content .row>span {
+                        min-width: 100px;
+                    }
 
-                            .table-body tr:last-child td {
-                                padding-top: 16px;
-                                padding-bottom: 12px;
-                                border-bottom: 1px solid #A6A6A6;
-                            }
-                        </style>
-                        <table class="w-full min-w-[600px]">
-                            <thead>
-                                <tr>
-                                    <th class="table-head" style="width: 15%;" rowspan="2">Room</th>
-                                    <th class="table-head" style="width: 12%;" rowspan="2">Area (m2)</th>
-                                    <th class="table-head" style="width: 12%;" rowspan="2">Floor</th>
-                                    <th class="table-head first" colspan="5">Capacity <span
-                                            class="inline-block font-medium lowercase">(guests)</span></th>
-                                </tr>
-                                <tr>
-                                    <th class="table-head center" style="width: 12%;">Theater</th>
-                                    <th class="table-head" style="width: 12%;">Classroom</th>
-                                    <th class="table-head" style="width: 12%;">U-shape</th>
-                                    <th class="table-head" style="width: 15%;">Banquet</th>
-                                    <th class="table-head" style="width: 15%;">Cocktail</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-body">
-                                <tr>
-                                    <td>Ballroom 01</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <td>Ballroom 02</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <td>Ballroom 03</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    .show-more {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                        transform: rotate(-90deg);
+                        transition: all .4s ease;
+                    }
+
+                    .show-more.active {
+                        transform: unset;
+                        transition: all .4s ease;
+                    }
+                </style>
+                <script defer>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const showMoreButtons = document.querySelectorAll(".show-more");
+
+                        showMoreButtons.forEach((button) => {
+                            button.addEventListener("click", function () {
+                                // Tìm phần .sub-content gần nhất sau button
+                                const subContent = this.closest("div").nextElementSibling;
+
+                                this.classList.toggle("active");
+                                if (subContent && subContent.classList.contains("sub-content")) {
+                                    subContent.classList.toggle("active");
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+                <div class="grid-cols-3">
+                    <div class="table-mobile-head">
+                        <div class="text-body-xs-bold text-primary uppercase">Room</div>
+                        <div class="text-body-xs-bold text-primary uppercase text-center">Area (m²)</div>
+                        <div class="text-body-xs-bold text-primary uppercase text-center">Floor</div>
+                        <div class="text-body-xs-bold text-primary uppercase text-center"></div>
                     </div>
-                    <div class="col-span-1 lg:col-span-2"></div>
-                </div>
-
-                <div class="mt-16">
-                    <h2 class="text-body-3xl-medium font-basker text-primary uppercase">
-                        Booking form
-                    </h2>
-                    <form class="mt-4 lg:mt-[44px] grid grid-cols-12 gap-2 lg:gap-6 relative">
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
-                            <p class="title-booking">Select type off event <span class="required">*</span></p>
-                            <select class="input-field">
-                                <option value="null">Select type off event *</option>
-                                <option value="1">1</option>
-                                <option value="1">1</option>
-                            </select>
-                        </label>
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
-                            <p class="title-booking">Date <span class="required">*</span></p>
-                            <input type="text" class="input-field lower">
-                        </label>
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
-                            <p class="title-booking">Time <span class="required">*</span></p>
-                            <input type="text" class="input-field lower" placeholder="">
-                        </label>
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
-                            <p class="title-booking">Duration <span class="required">*</span></p>
-                            <input type="text" class="input-field lower" placeholder="">
-                        </label>
-
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
-                            <p class="title-booking">Number of Guests</p>
-                            <select class="input-field">
-                                <option value="null">Number of Guests</option>
-                                <option value="1">1</option>
-                                <option value="1">1</option>
-                            </select>
-                        </label>
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
-                            <p class="title-booking">Full name</p>
-                            <input type="text" class="input-field lower">
-                        </label>
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
-                            <p class="title-booking">Company <span class="required">*</span></p>
-                            <input type="text" class="input-field lower" placeholder="">
-                        </label>
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-8">
-                            <p class="title-booking">Address</p>
-                            <input type="text" class="input-field lower">
-                        </label>
-                        <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
-                            <p class="title-booking">Phone number</p>
-                            <input type="text" class="input-field lower" placeholder="">
-                        </label>
-                        <label class="input-label max-lg:order-2 col-span-12 lg:col-span-8">
-                            <p class="title-booking">Additional Request</p>
-                            <textarea rows="5" class="input-field lower"></textarea>
-                        </label>
-                        <label class="input-label max-lg:order-1 col-span-12 md:col-span-6 lg:col-span-4">
-                            <p class="title-booking">Email</p>
-                            <input type="text" class="input-field lower" placeholder="">
-                        </label>
-                        <button
-                            class="max-lg:mt-4 max-lg:col-span-12 max-lg:order-3 button lg:absolute bottom-0 w-full lg:w-[32%] right-0">SEND
-                            BOOKING</button>
-                    </form>
+                    <div class="table-mobile-content">
+                        <div class="table-mobile-row">
+                            <div class="text-body-xs-regular text-primary-text uppercase">Ballroom 01</div>
+                            <div class="text-body-xs-regular text-primary-text uppercase text-center">-</div>
+                            <div class="text-body-xs-regular text-primary-text uppercase text-center">-</div>
+                            <div class="text-body-xs-regular text-primary-text uppercase text-center">
+                                <button class="show-more">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"
+                                        fill="none">
+                                        <path
+                                            d="M4.02128 4.76596L0.159575 0.904255C0.106383 0.851064 0.0638298 0.797872 0.0425532 0.734043C0.0212766 0.670213 2.65058e-08 0.606383 2.32507e-08 0.531915C1.72055e-08 0.393617 0.0531915 0.265957 0.148936 0.159574C0.244681 0.0531915 0.37234 0 0.531915 0H8.61702C8.7766 0 8.90426 0.0531915 9 0.159574C9.09575 0.265957 9.14894 0.393617 9.14894 0.531915C9.14894 0.56383 9.09575 0.691489 8.98936 0.904255L5.12766 4.76596C5.04255 4.85106 4.94681 4.91489 4.8617 4.95745C4.7766 5 4.67021 5.01064 4.56383 5.01064C4.45745 5.01064 4.3617 4.98936 4.26596 4.95745C4.17021 4.92553 4.08511 4.8617 4 4.76596H4.02128Z"
+                                            fill="#715137" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- sub-content -->
+                            <div class="sub-content">
+                                <div class="w-full pt-4 pb-3 flex flex-col gap-2">
+                                    <div class="row">
+                                        <span class="text-body-xs-semibold text-primary-text uppercase">CAPACITY</span>
+                                        <span class="text-body-xs-regular text-primary-text">(guests)</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">THEATER:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">CLASSROOM:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">U-SHAPE:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">BANQUET:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">COCKTAIL:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-mobile-row">
+                            <div class="text-body-xs-regular text-primary-text uppercase">Ballroom 02</div>
+                            <div class="text-body-xs-regular text-primary-text uppercase text-center">-</div>
+                            <div class="text-body-xs-regular text-primary-text uppercase text-center">-</div>
+                            <div class="text-body-xs-regular text-primary-text uppercase text-center">
+                                <button class="show-more">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"
+                                        fill="none">
+                                        <path
+                                            d="M4.02128 4.76596L0.159575 0.904255C0.106383 0.851064 0.0638298 0.797872 0.0425532 0.734043C0.0212766 0.670213 2.65058e-08 0.606383 2.32507e-08 0.531915C1.72055e-08 0.393617 0.0531915 0.265957 0.148936 0.159574C0.244681 0.0531915 0.37234 0 0.531915 0H8.61702C8.7766 0 8.90426 0.0531915 9 0.159574C9.09575 0.265957 9.14894 0.393617 9.14894 0.531915C9.14894 0.56383 9.09575 0.691489 8.98936 0.904255L5.12766 4.76596C5.04255 4.85106 4.94681 4.91489 4.8617 4.95745C4.7766 5 4.67021 5.01064 4.56383 5.01064C4.45745 5.01064 4.3617 4.98936 4.26596 4.95745C4.17021 4.92553 4.08511 4.8617 4 4.76596H4.02128Z"
+                                            fill="#715137" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- sub-content -->
+                            <div class="sub-content">
+                                <div class="w-full pt-4 pb-3 flex flex-col gap-2">
+                                    <div class="row">
+                                        <span class="text-body-xs-semibold text-primary-text uppercase">CAPACITY</span>
+                                        <span class="text-body-xs-regular text-primary-text">(guests)</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">THEATER:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">CLASSROOM:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">U-SHAPE:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">BANQUET:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="text-body-xs-regular text-primary-text uppercase">COCKTAIL:</span>
+                                        <span class="text-body-xs-regular text-primary-text">100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- -------------------- section 4 -------------------- -->
+
+        <section class="pt-16 pb-[104px] lg:pt-[50px] lg:pb-[293px]">
+            <div class="container">
+                <h2 class="text-body-3xl-medium font-basker text-primary uppercase">
+                    Booking form
+                </h2>
+                <form class="mt-4 lg:mt-[44px] grid grid-cols-12 gap-2 lg:gap-6 relative">
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
+                        <p class="title-booking">Select type off event <span class="required">*</span></p>
+                        <select class="input-field">
+                            <option value="null">Select type off event *</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                        </select>
+                    </label>
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
+                        <p class="title-booking">Date <span class="required">*</span></p>
+                        <input type="text" class="input-field lower">
+                    </label>
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
+                        <p class="title-booking">Time <span class="required">*</span></p>
+                        <input type="text" class="input-field lower" placeholder="">
+                    </label>
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-3">
+                        <p class="title-booking">Duration <span class="required">*</span></p>
+                        <input type="text" class="input-field lower" placeholder="">
+                    </label>
+
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
+                        <p class="title-booking">Number of Guests</p>
+                        <select class="input-field">
+                            <option value="null">Number of Guests</option>
+                            <option value="1">1</option>
+                            <option value="1">1</option>
+                        </select>
+                    </label>
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
+                        <p class="title-booking">Full name</p>
+                        <input type="text" class="input-field lower">
+                    </label>
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
+                        <p class="title-booking">Company <span class="required">*</span></p>
+                        <input type="text" class="input-field lower" placeholder="">
+                    </label>
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-8">
+                        <p class="title-booking">Address</p>
+                        <input type="text" class="input-field lower">
+                    </label>
+                    <label class="input-label col-span-12 md:col-span-6 lg:col-span-4">
+                        <p class="title-booking">Phone number</p>
+                        <input type="text" class="input-field lower" placeholder="">
+                    </label>
+                    <label class="input-label max-lg:order-2 col-span-12 lg:col-span-8">
+                        <p class="title-booking">Additional Request</p>
+                        <textarea rows="5" class="input-field lower"></textarea>
+                    </label>
+                    <label class="input-label max-lg:order-1 col-span-12 md:col-span-6 lg:col-span-4">
+                        <p class="title-booking">Email</p>
+                        <input type="text" class="input-field lower" placeholder="">
+                    </label>
+                    <button
+                        class="max-lg:mt-4 max-lg:col-span-12 max-lg:order-3 button lg:absolute bottom-0 w-full lg:w-[32%] right-0">SEND
+                        BOOKING</button>
+                </form>
+            </div>
+        </section>
 
         <!-- -------------------- section 5 -------------------- -->
 
