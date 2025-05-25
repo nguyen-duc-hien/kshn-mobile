@@ -1738,6 +1738,12 @@ hr.footer-divider {
   border: 1px solid var(--primary);
   background: var(--bg-fill);
 }
+@media (max-width: 992px) {
+  .swiper .swiper-button-prev {
+    width: 24px;
+    height: 24px;
+  }
+}
 .swiper .swiper-button-prev:hover {
   background: var(--secondary);
 }
@@ -1762,6 +1768,12 @@ hr.footer-divider {
   border-radius: 73px;
   border: 1px solid var(--primary);
   background: var(--bg-fill);
+}
+@media (max-width: 992px) {
+  .swiper .swiper-button-next {
+    width: 24px;
+    height: 24px;
+  }
 }
 .swiper .swiper-button-next:hover {
   background: var(--secondary);

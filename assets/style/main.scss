@@ -1304,6 +1304,12 @@ hr {
       border-radius: 73px;
       border: 1px solid var(--primary);
       background: var(--bg-fill);
+
+      @media (max-width: 992px) {
+        width: 24px;
+        height: 24px;
+      }
+
       &:hover {
         background: var(--secondary);
       }
@@ -1324,6 +1330,12 @@ hr {
       border-radius: 73px;
       border: 1px solid var(--primary);
       background: var(--bg-fill);
+
+      @media (max-width: 992px) {
+        width: 24px;
+        height: 24px;
+      }
+
       &:hover {
         background: var(--secondary);
       }
